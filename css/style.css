@@ -1,0 +1,308 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+html{ font-size: 16px;}
+*{
+    margin: 0; padding: 0;
+    font: 16px "Pretendard";
+    letter-spacing: -0.3%;
+	color: #121114;
+    box-sizing: border-box;
+}
+a{ text-decoration: none; color: inherit; display: block;}
+li{ list-style: none;}
+img{ vertical-align: middle;}
+body{ background-color: #F9F9FA;}
+
+header{ width: 100%; height: 830px; overflow: hidden;}
+/* 메뉴바 */
+.topBar{ width: 0%; height: 46px; background-color: rgba(30, 36, 48, 0.7); overflow: hidden; position: fixed; top: 0; z-index: 10;}
+    .barEvent{ background-color: #1E2430;}
+.topBar>a{ width: 104px; height: 45px; position: absolute; left: 24px;}
+.logo{ width: 100%; margin-top: 19px;}
+.menu{ width: auto; height: 60px; position: absolute; right: 24px; top: 0;}
+.menu>img{ margin-top: 7px;} .carMenu{ margin-right: 20px;}
+    .menu>img:hover{ opacity: 0.5;}
+/*슬라이드 메뉴*/
+@media (min-width: 1125px){
+    nav{
+        width: 100%;
+        background-color: #F9F9FA;
+        position: fixed; top: 46px; 
+        z-index: 10;
+        display: none;
+        padding-bottom: 44px; overflow: auto;
+    }
+    .menu1{ height: 100%; max-height: 606px;} .menu2{ height: 100%; max-height: 630px;}
+    .menuBox{ padding: 200px 0 44px 0; position: relative;}
+    .menuClose{ position: absolute; right: 0; top: 70px;}
+        .menuClose:hover{ opacity: 0.6;}
+    .menuTitle{
+        position: absolute; left: 0; top: 70px; 
+        font-size: 1.3125rem; font-weight: 600;
+        color: #7D7C82;
+        line-height: 26px;
+        cursor: pointer;
+    }
+    .carMore{ display: none;}
+        .shop{ left: 152px;} .service{ left: 263px;}
+        .menuTitle:hover{ color: #2A609D;}
+    .sB>li{ float: left; margin-left: 160px; font-size: 0.9375rem; font-weight: 600; color: #2A609D;}
+        .sB>li:first-child{ margin-left: 0;}
+        .sB::after{ content: ""; display: block; clear: both;}
+            .sB ul{ margin-top: 40px;}
+            .sB ul>li>a{ font-size: 1.0625rem; font-weight: 400; margin-bottom: 30px;}
+            .sB ul>li>a:hover{ font-weight: 600; text-decoration: underline;}
+    .sB2, .sB3{ display: none;}
+
+    .plug-in{ left: 139px;} .mild{ left: 347px;}
+    .csB>li{ overflow: hidden; display: inline-block; margin-top: 70px;}
+        .csB>li:nth-child(1){ margin-top: 0;}
+        .csB>li>p{ font-size: 0.9375rem; font-weight: 600; color: #2A609D; margin-bottom:10px; display: inline-block;}
+    .carBox li{
+        width: 404px; height: 123px;
+        padding: 21px 0 24px 10px;
+        float: left;
+        overflow: hidden;
+        margin-right: 20px;
+    }
+        .carBox li:nth-child(3){ margin-right: 0;}
+        .carBox li:hover{ background-color: #F2F4F6;}
+    .carBox .imgBox{ width: 200px; height: 78px;}
+    .carBox img{ width: 100%;}
+    .carBox li a{ display: flex;}
+    .info{ margin-left: 5px; margin-top: 9px;}
+        .info>p:nth-child(1), .info span{ font-size: 1.0625rem; font-weight: 600;}
+        .info .price{
+            font-size: 0.75rem; font-weight: 400;
+            margin-top: 9px;
+            display: flex; align-items: center;
+        }
+        .info span{ margin-left: 2px; font-size: 0.9375rem;}
+        .info>p:nth-child(3){ font-size: 0.75rem; font-weight: 400; color: #7D7C82; margin-top: 4px;}
+    .csB2, .csB3{ display: none;}
+
+
+    .menuClick{ font-weight: 700; color: #2A609D; border-bottom: 5px solid #2A609D;}/*메뉴이벤트*/
+}
+
+/* 히어로이미지 */
+#heroBg{
+    width: 100%; height: 830px;
+    background: url(../images/heroBg.jpg) no-repeat center center/cover;
+}
+.heroCover{
+    width: 100%; height: 830px;
+    background-color: rgb(30, 36, 48, 0.1); 
+    position: absolute; left: 0; top: 0;
+}
+#heroBg p, #heroBg a{ color: #F4F6F9;}
+.heroText, .heroArrow, .Ex30{ z-index: 1; position: absolute; width: 100%; text-align: center;}
+.heroText{ top: 140px; z-index: 1; opacity: 0;}
+    .heroText p:nth-child(1){ font-size: 2.25rem; font-weight: 700;}
+    .heroText p:nth-child(2){ font-size: 1.0625rem; font-weight: 300; margin-top: 13px; line-height: 24px;}
+.heroArrow{ top: 236px; padding-left: 7px; display: none;}
+.Ex30{ top: 320px; opacity: 0;}
+    .Ex30 p:nth-child(1){ font-size: 1.875rem; font-weight: 600;}
+    .Ex30 p:nth-child(2){ font-size: 1.0625rem; font-weight: 300;}
+    .showMore{ font-size: 0.875rem; font-weight: 200; text-decoration: underline; margin-top: 16px;}
+    .showMore:hover{ font-weight: 600;}
+/* ----------------------------------- */
+#bodyWrap{ width: 100%; margin: 0 auto; overflow: hidden;}
+.wrap{ width: 100%; max-width: 1300px;  margin: 0 auto;}/*큰 박스*/
+.mgWrap, .menuBox{ max-width: 1252px; margin: 0 24px; overflow: hidden;}/*마진설정*/
+.title{ font-size: 1.625rem; font-weight: 700; opacity: 0;}/*font-size 26*/
+.subTitle{ opacity: 0;}
+.alert{ font-size: 0.75rem; text-align: center; margin-top: 120px;}
+
+/*Best modal*/
+#con1{ width: 100%; background-color: #121114; padding: 120px 0 60px 0;}
+#con1 p, #con1 span{ color: #E6E6E6;}
+#con1 .alert{ color: #5F6065;}
+#con1 .mgWrap{ position: relative;}
+#con1 .title{ margin-bottom: 40px;}
+.btnBox{ position: absolute; right: 0; top: 0; display: none;}
+    .lBtn{ position: absolute; right: 42px;}
+    .btnBox img:hover{ opacity: 0.5;}
+
+.modalBox{ width: 100%; height: 331px; margin-top: 80px; position: relative;}
+.mB{
+    width: 298px; height: auto;
+    margin-right: 20px;
+    position: absolute;
+    left: 0; top: 0;
+}
+.mB:nth-child(2){ left: 318px;} .mB:nth-child(3){ left: 636px;} .mB:nth-child(4){ left: 954px;}
+.mB .modal{
+    width: 298px; height: 230px;
+    overflow: hidden;
+    transition: background-size 0.6s ease;
+    background-size: 162% auto;
+}/*사진박스*/
+.modal.expand{ background-size: 180% auto;}
+.mB>.type{ font-size: 0.8125rem; font-weight: 300; margin-top: 10px;}
+.mB>.name{ font-size: 1.5rem; font-weight: 700; margin-top: 20px; display: flex; align-items: center;} .name>span{ font-size: 1.125rem; font-weight: 500; margin-left: 6px;}
+#con1 .mB>.cost{ font-size: 0.875rem; font-weight: 300; color: #7D7C82; margin-top: 5px;}
+.mB .price{ font-size: 1.125rem; font-weight: 400; margin-left: 5px;}
+.mB .reser{ font-size: 1rem; font-weight: 400; margin-left: 40px; display: inline-block; color: #E6E6E6;}
+.mB .reser:hover{ color: #2A609D; font-weight: 600; text-decoration: underline;}
+
+.modal1{ background: url(../images/modal1.webp) no-repeat center center/cover;}
+.modal2{ background: url(../images/modal2.webp) no-repeat center center/cover;}
+.modal3{ background: url(../images/modal3.svg) no-repeat center center/cover;}
+.modal4{ background: url(../images/modal4.webp) no-repeat center center/cover;}
+
+/* Why volvo? */
+#con2{
+    width: 100%;
+    padding: 120px 0;
+    background: linear-gradient(to bottom, #0F2237 0%, #142E4C 17%, #2A609D 100%);
+}
+#con2 p{ color: #F4F6F9;}
+
+.whyBox{
+    width: 100%; height: 550px;
+    position: relative;
+    margin-top: 120px;
+}
+.clickBar{
+    width: 100%; height:46px;
+    position: absolute;
+    z-index: 4;
+    background-color: rgb(18, 17, 20, 0.4);
+}
+.clickBar:hover{  background-color: rgb(18, 17, 20, 0.8);}
+.clickBar>img{ margin-left: 47.2%; margin-top: 12px;}/*margin-left: 591px;*/
+.top{ top: 35px;} .bottom{ bottom: 40px;}
+.whyBox>.wB{ margin: 0 auto; position: relative;}
+    .wbImg{ width: 100%; height: 100%; object-fit: cover;}
+.whyBox>.wB:nth-child(2){
+    width: 93.6%; height: 510px;
+    opacity: 0.05;
+}
+.whyBox>.wB:nth-child(3){
+    width: 100%; height: 475px;
+    position: absolute; top: 35px;
+    z-index: 3;
+}
+.whyBox>.wB:nth-child(4){
+    width: 93.6%; height: 515px;
+    position: absolute; left: 3.2%; bottom: 0;
+    z-index: 2;
+    opacity: 0.7;
+}/*width: 1172px, left: 40*/
+.wbText{ position: absolute; top: 188px; left: 3.99%; padding-right: 3.99%;}/*left: 50*/
+.wbText>p:nth-child(1){ font-size: 2rem; font-weight: 700;}
+.wbText>p:nth-child(2){ font-size: 1rem; font-weight: 200; margin-top: 40px; line-height: 23px; color: #E6E6E6;}
+.wbText>p:nth-child(3) a{ font-size: 1rem; font-weight: 200; margin-top: 16px; text-decoration: underline; color: #E6E6E6;}
+.wbText>p:nth-child(3) a:hover{ font-weight: 500;}
+
+/* About electric car */
+#con3{ width: 100%; padding: 120px 0; background-color: #EBEBF0;}
+#con3 .subTitle{ font-size: 1rem;  font-weight: 500; color: #5F6065; margin-top: 4px;}
+.aboutBox{ width: 100%; margin-top: 120px; display: flex; overflow: hidden;}
+.aB{
+    width: 49.2%; height: 436px;
+    padding: 34px 0 0 34px;
+    background-color: #F9F9FA;
+    position: relative;
+}/*widht: 616px*/
+.aB:nth-child(2){ margin-left: 20px;}
+
+.aB>a>p:nth-child(1){ font-size: 1.4375rem; font-weight: 600;}/*font-size 23*/
+    .aB>a>p:nth-child(2){
+        font-size: 1rem; font-weight: 400;
+        line-height: 22px; margin: 16px 34px 0 0;
+        color: #464646;
+    }
+.aB .btn{
+    font-size: 1.0625rem; font-weight: 500;
+    color: #464646;
+    line-height: 20px;
+    position: absolute;
+    top: 198px; left: 34px;
+}
+    .aB:hover .btn{ font-size: 1.125rem; font-weight: 600; line-height: 20px;}
+
+.aboutArrow, .aboutCar{ position: absolute;}
+.aboutArrow{ height: 20px; left: 34px; top: 210px;}/*top 210*/
+    .aboutArrow>img{ float: right; width: 100%; vertical-align: bottom;}
+.aboutCar{ width: 55.1%; right: 0; bottom: 0;}
+
+/* 2024 컨슈머인사이트 기획조사 결과 */
+#con4{ width: 100%; padding: 120px 0;}
+#con4 .subTitle{ font-size: 1.125rem; font-weight: 400; color: #464646; margin-top: 30px;}
+#con4 .mgWrap{ display: flex;}
+.resultBox{
+    width: 28.4%; height: 299px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}/*width: 356px*/
+.resultBox .btn{
+    font-size: 1.0625rem; font-weight: 500; 
+    position: absolute; bottom: 10px;
+    color: #464646;
+    width: 100%; height: auto;
+}
+.resultBox .btn:hover{ font-size: 1.125rem; font-weight: 600;}
+.rbArrow{ position: absolute;  right: 0; bottom: 0;}
+.rbImg{ margin-left: 4%; width: 67.7%;}
+    .rbImg img{ width: 100%; height: 100%; object-fit: cover; object-position: top right;}
+
+/* Quick Links */
+#con5{ width: 100%; padding: 120px 0 60px 0; border-top: 1px solid #9FA9B8;}
+.quickBox{ width: 100%; height: 258px; margin-top: 120px; display: flex;}
+.qB:nth-child(2), .qB:nth-child(3), .qB:nth-child(4){ margin-left: 20px;}
+.qB{ width: 23.8%; height: 258px; position: relative; overflow: hidden;}/*width: 298 height 258*/
+    .quickText{ font-size: 1.0625rem; line-height: 20px; font-weight: 500; color: #464646;}
+    .qB>img{
+        width: 100%; height: 20px;
+        position: absolute; top: 12px;
+        object-fit: cover; object-position: bottom right;
+    }
+    .quickImg{
+        width: 100%; height: 208px;
+        overflow: hidden;
+        margin-top: 30px;
+    }/*이미지 박스 사이즈 height 208*/
+
+    .quickImg img{ transition: transform 0.5s ease; transform: scale(1);}
+    .qB:hover .quickImg>img{ transform: scale(1.1);}
+.qB:hover .quickText{ line-height: 20px; font-size: 1.125rem; font-weight: 600;}
+#con5 .alert{ color: #7D7C82;}
+
+/* footer */
+footer{ width: 100%; padding: 60px 0 30px 0; background-color: #DBDDE2;}
+.back, .contact, .ftmenu, .copy{ width: auto; margin: 0 auto; text-align: center;}
+    .back>p{ font-size: 1.25rem; font-weight: 700; color: #5F6065; margin-top: 10px;}
+    .back{ width: 140px; cursor: pointer;} .back:hover>p, .back:hover>img{ opacity: 0.5;}
+.contact{ margin-top: 60px;}
+    .contact>p{ font-size: 1.125rem; font-weight: 600; color: #5F6065;}
+.sns{ display: flex; width: 164px; margin: 0 auto;}
+    .sns>li{ margin-left: 40px; margin-top: 8px;}
+    .sns>li:first-child{ margin-left: 0;}
+    .sns>li:hover img{ opacity: 0.5;}
+.ftmenu{ margin-top: 70px;}
+    .ftmenu li{ display: inline-block;}
+    .ftmenu li>a{ font-size: 0.9375rem; font-weight: 500; color: #5F6065;}
+    .ftmenu li>a:hover{ text-decoration: underline;}
+    .pipe{ padding: 0 10px; font-size: 0.9375rem; font-weight: 400; color: #5F6065;}
+.copy{ margin-top: 24px;}
+    .copy>p{ font-size: 0.75rem; font-weight: 400; color: #7D7C82;}
+
+@media (max-width: 744px) {
+     /*About electric car*/
+    .aboutBox{ width: 100%; height: auto; display: block;}
+    .aboutArrow{ height: 16px; top: 214px;}
+        .aboutArrow>img{ float: right; height: 100%;}
+    .aB{ width: 100%;} .aB p>br{ white-space: nowrap;}
+    .aB:nth-child(2){ margin: 16px 0 0 0;}
+    
+}
+
+

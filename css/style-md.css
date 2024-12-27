@@ -1,0 +1,64 @@
+@charset "utf-8";
+@media (max-width: 1124px) {
+    html{ font-size: 14px;}
+    .mgWrap, .menuBox{ max-width: 1252px; margin: 0 20px; overflow: hidden;}/*마진설정*/
+
+    /*슬라이드 메뉴*/
+    nav{
+        width: 300px;
+        background-color: #F9F9FA;
+        position: fixed; top: 46px; right: 0;
+        z-index: 10;
+        display: none;
+    }
+    .menu1{ height: 784px; height: 100%; max-height: 784px; overflow: auto;}
+    .menuBox{ position: relative; padding-top: 80px;}
+    .menuClose{ position: absolute; right: 0; top: 40px;}
+        .menuClose:hover{ opacity: 0.6;}
+    .menuBox>li{ padding: 20px 0 65px 0; border-top: 1px solid #9FA9B8;}
+    .menuTitle{
+        font-size: 1.3124rem; font-weight: 700;
+        color: #121114;
+        margin-bottom: 20px;
+    }
+    .sB>li{ font-size: 0.9375rem; font-weight: 500; color: #464646; margin-bottom: 8px; cursor: pointer;}
+        .sB>li:last-child{ margin-bottom: 0;}
+        .sB>li:hover{ font-weight: 700; color: #121114;}
+            .sB>li.sbEvent{ color: #2A609D; font-weight: 700;}
+    .sB ul{ margin: 14px 0 40px 0; display: none;}
+        .sB ul>li{ margin-bottom: 8px;}
+        .sB ul>li:last-child{ margin-bottom: 0;}
+            .sB ul>li>a{ font-size: 1.0625rem; font-weight: 400;}
+            .sB ul>li>a:hover{ text-decoration: underline;}
+
+    .carMenu{ display: none;}
+    li.carMore{ padding-bottom: 20px; border-top: none;}
+    .carMore>a{ font-size: 1.1875rem; font-weight: 800;}
+        .carMore>a:hover{ text-decoration: underline;}
+
+    /* Best modal */
+    .btnBox{ display: block;}
+
+    /* Why volvo? */
+    .wbImg2{ object-position: left center;}
+    .clickBar>img{ margin-left: 44%; margin-top: 12px;}
+
+    /* 2024 컨슈머인사이트 기획조사 결과 */
+   #con4 .title br, #con4 .subTitle br{ display: none; white-space: nowrap;}
+   #con4 .subTitle{ margin-top: 8px;}
+   #con4 .mgWrap{ display: block; overflow: hidden;}
+   .resultBox{ width: 100%; height: 132px; margin-bottom: 20px;}
+   .rbArrow{ left: 0; height: 16px;}
+   .rbImg{ width: 100%; margin-left: 0;}
+
+   /* Quick Links */
+   .quickBox{ width: 100%; height: auto; display: block; overflow: hidden;}
+   .qB{ width: 47.6%; height: auto;}
+   .qB>img{ height: 16px; top: 15px;}
+        .qB:nth-child(1), .qB:nth-child(3){ float: left; margin-left: 0;}
+        .qB:nth-child(2), .qB:nth-child(4){ float: right; margin-left: 16px;}
+        .qB:nth-child(3), .qB:nth-child(4){ margin-top: 40px;}
+            .quickImg{ height: auto;}
+            .quickImg>img{ width: 100%; height: auto;}
+    #con5 .alert{ overflow: hidden;}
+}
